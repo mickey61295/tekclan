@@ -1,40 +1,26 @@
-import { Grid } from '@mui/material'
 import React from 'react'
+import { Grid } from '@mui/material'
+import { withStyles } from '@mui/styles'
 
-function LandingPage() {
+import { JobStatistics, SideBar } from '../components'
+import Dashboard from '../components/Dashboard'
+
+const styles = () => ({})
+
+function LandingPage(props) {
+	const { classes } = props
 	return (
 		<Grid container sx={{ height: '100%' }}>
 			{/* Sidebar */}
-			<Grid
-				container
-				item
-				sx={{ border: 1, display: { xs: 'none', md: 'block' } }}
-				md={1}
-			>
-				Hi
-			</Grid>
+			<SideBar />
 			{/* Main Layout */}
-			<Grid
-				container
-				item
-				direction="column"
-				sx={{ border: 1 }}
-				sm={12}
-				md={11}
-			>
-				<Grid container item sx={{ border: 1 }} direction="column">
-					{/* Dashboard Context */}
-					<Grid container item sx={{ border: 1 }}>
-						Top Part
-					</Grid>
-					<Grid container item sx={{ border: 1 }}>
-						Bottom Part
-					</Grid>
-				</Grid>
+			<Grid container item direction="column" sm={12} md={11}>
+				{/* Dashboard Context */}
+				<Dashboard />
 				{/* Job Context */}
 				<Grid container item sx={{ border: 1 }}>
 					<Grid container item sx={{ border: 1 }} md={6}>
-						Job Statistics
+						<JobStatistics />
 					</Grid>
 					<Grid container item sx={{ border: 1 }} md={3}>
 						Job Updates
@@ -48,4 +34,4 @@ function LandingPage() {
 	)
 }
 
-export default LandingPage
+export default withStyles(styles)(LandingPage)

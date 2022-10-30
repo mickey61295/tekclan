@@ -1,22 +1,36 @@
 import React from 'react'
-import { Box, Button, Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
+import { withStyles } from '@mui/styles'
+import HeaderButtons from '../common/HeaderButtons'
 
-const headersList = ['Overview', 'Views', 'Applied']
-export default function JobStatistics() {
+const styles = () => ({})
+const jobStatistics = (props) => {
+	const { classes } = props
 	return (
 		<>
-			<Box sx={{ display: 'flex' }}>
-				<Typography sx={{ margin:"2px" ,fontWeight: 'bold' }} variant="h5">
-					Job Statistics
-				</Typography>
-				{headersList.map((item) => (
-					<Button>
-						<Typography variant="subtitle1" color="grey.500">
-							{item}
-						</Typography>
-					</Button>
-				))}
-			</Box>
+			{/* Header */}
+			<Grid container item justifyContent="space-between">
+				<Grid alignSelf="center" item>
+					<Typography sx={{ fontWeight: 'bold' }} variant="h5">
+						Job Statistics
+					</Typography>
+				</Grid>
+				<Grid item>
+					<HeaderButtons />
+				</Grid>
+			</Grid>
+			{/* Job Boxes */}
+			<Grid container item sx={{ border: 1 }}>
+				<Grid  item sx={{ border: 1 }}>
+					Hello
+				</Grid>
+				<Grid  item sx={{ border: 1 }}>
+					Hello
+				</Grid>
+			</Grid>
+			<Grid></Grid>
 		</>
 	)
 }
+
+export default withStyles(styles)(jobStatistics)
