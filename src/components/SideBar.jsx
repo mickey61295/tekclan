@@ -10,7 +10,7 @@ import icons from '../constants/Icons'
 const styles = () => ({
 	sideBarContainer: {
 		padding: '10px',
-		justifyContent: 'space-between',
+		justifyContent: 'space-around',
 		alignItems: 'center',
 		'& svg': {
 			cursor: 'pointer',
@@ -28,6 +28,7 @@ const styles = () => ({
 		height: '70%',
 		justifyContent: 'space-between',
 		alignItems: 'center',
+		scale: '0.9',
 	},
 })
 
@@ -42,12 +43,12 @@ const SideBar = (props) => {
 				borderColor: grey[500],
 				display: { xs: 'none', md: 'flex' },
 			}}
-			md={1}
+			md={0.85}
 			direction="column"
 			className={classes.sideBarContainer}
 		>
 			<Grid item className={classes.itemContainer}>
-				<Avatar sx={{ width: 70, height: 70, bgcolor: green[500] }}>
+				<Avatar sx={{ width: 50, height: 50, bgcolor: green[500] }}>
 					<AssignmentRoundedIcon />
 				</Avatar>
 			</Grid>
@@ -79,7 +80,7 @@ const SideBar = (props) => {
 			</Grid>
 			<Divider />
 			<Grid item className={classes.itemContainer}>
-				<Avatar sx={{ width: 56, height: 56, bgcolor: deepOrange[500] }}>
+				<Avatar sx={{ width: 50, height: 50, bgcolor: deepOrange[500] }}>
 					<PersonRoundedIcon />
 				</Avatar>
 			</Grid>
