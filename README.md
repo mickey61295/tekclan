@@ -1,8 +1,8 @@
-#Preview
-#Mobile
+# Preview
+# Mobile
 ![image](https://user-images.githubusercontent.com/31827390/199176090-43d774bf-1a64-4bd4-9d45-ce34db475df7.png)
 ![image](https://user-images.githubusercontent.com/31827390/199176193-73eac4bd-87d2-4085-991f-70e6c4d3573d.png)
-#Desktop
+# Desktop
 ![image](https://user-images.githubusercontent.com/31827390/199176350-3a635238-5f24-41d0-84aa-52e730cf7878.png)
 
 
