@@ -2,8 +2,13 @@ import React from 'react'
 import { Grid } from '@mui/material'
 import { withStyles } from '@mui/styles'
 
-import { JobStatistics, SideBar } from '../components'
-import Dashboard from '../components/Dashboard'
+import {
+	JobOpen,
+	JobStatistics,
+	SideBar,
+	Dashboard,
+	JobUpdates,
+} from '../components'
 
 const styles = () => ({})
 
@@ -14,19 +19,31 @@ function LandingPage(props) {
 			{/* Sidebar */}
 			<SideBar />
 			{/* Main Layout */}
-			<Grid container item direction="column" sm={12} md={11}>
+			<Grid container item direction="column" md={11.15}>
 				{/* Dashboard Context */}
 				<Dashboard />
 				{/* Job Context */}
-				<Grid container item sx={{ border: 1 }}>
-					<Grid container item sx={{ border: 1 }} md={6}>
+				<Grid container item>
+					<Grid container item p={2} md={6}>
 						<JobStatistics />
 					</Grid>
-					<Grid container item sx={{ border: 1 }} md={3}>
-						Job Updates
+					<Grid
+						container
+						direction="column"
+						item
+						sx={{ padding: '5px', marginTop: '5px' }}
+						md={3}
+					>
+						<JobOpen />
 					</Grid>
-					<Grid container item sx={{ border: 1 }} md={3}>
-						Job Open
+					<Grid
+						container
+						direction="column"
+						item
+						sx={{ padding: '5px', marginTop: '5px' }}
+						md={3}
+					>
+						<JobUpdates />
 					</Grid>
 				</Grid>
 			</Grid>
