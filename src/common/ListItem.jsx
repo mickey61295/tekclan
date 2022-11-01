@@ -15,7 +15,13 @@ const ListItem = (props) => {
 	const { classes } = props
 	return (
 		<>
-			<Grid item container className={classes.itemContainer} md={3.5}>
+			<Grid
+				item
+				container
+				justifyContent="space-between"
+				className={classes.itemContainer}
+				md={3.5}
+			>
 				{props.startIcon}
 				<Typography variant="h6" sx={{ fontWeight: 'bold' }}>
 					{props.number}
